@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="{% static 'css/registration.css' %}">  
+</head> 
+
+<body> 
+	<div class="main"> 
+		<h1>Event Registration Form</h1> 
+		<form action="" method="post"> 
+			<label for="first">Full Name:</label> 
+			<input type="text" id="first"
+				name="first"
+				placeholder="Enter your first name" required> 
+
+			<label for="email">Email:</label> 
+			<input type="email" id="email"
+				name="email"
+				placeholder="Enter your email" required> 
+
+			<!-- <label for="dob">Date of Birth:</label> 
+			<input type="date"
+				id="dob" name="dob"
+				placeholder="Enter your DOB" required>  -->
+
+			<label for="password">Password:</label> 
+			<input type="password" id="password"
+				name="password"
+				placeholder="Enter your password"
+				pattern= 
+				"^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required				 
+				title="Password must contain at least one number, 
+					one alphabet, one symbol, and be at 
+					least 8 characters long"> 
+
+			<label for="repassword">Re-type Password:</label> 
+			<input type="password" id="repassword"
+				name="repassword"
+				placeholder="Re-Enter your password" required> 
+			<span id="pass"></span> 
+
+			<label for="mobile">Contact:</label> 
+			<input type="text" id="mobile"
+				name="mobile"
+				placeholder="Enter your Mobile Number" required 
+				maxlength="10"> 
+
+			<label for="gender">Gender:</label> 
+			<select id="gender" name="gender" required> 
+				<option value="male">Male</option> 
+				<option value="female">Female</option> 
+				<option value="other">Other</option> 
+			</select>
+
+			<label for="college">College:</label> 
+			<input type="text" id="mobile"
+				name="college"
+				placeholder="Enter your College Name" required 
+				maxlength="100">
+
+            <label for="college">Programms:</label>
+     
+            	            
+            <div class=box>
+              <div class=first>
+            	Fashion Show<input type="checkbox" id="fashionshow"
+				    name="fashionshow"> 
+				Dance<input type="checkbox" id="Dance"
+				    name="Dance"> 
+		        Debugging<input type="checkbox" id="Debugging"
+				    name="Debugging"> 
+				Lan Gaming<input type="checkbox" id="Lan"
+				    name="Lan">
+		      </div>
+              <div class=second>
+            		Mobile Gaming<input type="checkbox" id="Mobile"
+				    name="Mobile"> 
+                Quiz<input type="checkbox" id="Quiz"
+				    name="Quiz"> 
+				Treasure Hunt<input type="checkbox" id="Hunt"
+				    name="Hunt"> 
+				Spot Choreography<input type="checkbox" id="Spot"
+				    name="Spot"> 
+              </div>
+            </div>	
+
+			<div class="wrap"> 
+				<button type="submit" onclick="solve()" style="width:80px;"> 
+				Submit 
+				</button> 
+			</div> 
+		</form> 
+	</div> 
+	<script src="registration.js"></script> 
+</body> 
+
+</html>
