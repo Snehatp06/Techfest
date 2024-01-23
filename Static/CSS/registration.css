@@ -5,7 +5,7 @@ body {
   justify-content: center; 
   font-family: sans-serif; 
   line-height: 1.5; 
-  min-height: 180vh; 
+  min-height: 120vh; 
   background: #000; 
   flex-direction: column; 
   margin: 0; 
@@ -35,10 +35,10 @@ label {
   font-weight: bold; 
 } 
 
-#pass { 
+/* #pass { 
   color: red; 
   font-size: 12px; 
-} 
+}  */
 
 input { 
   display: block; 
@@ -63,7 +63,7 @@ select {
 button{ 
   padding: 15px; 
   border-radius: 10px; 
-  margin-top: 250px; 
+  margin-top: 60px; 
   margin-bottom: 15px; 
   border: none; 
   color: white; 
@@ -77,15 +77,15 @@ button{
   justify-content: center; 
   align-items: center; 
 }
-.box{
+/* .box{
    width: 100%;
    height: 40%;
-   /*background-color: pink;*/
+   background-color: pink;
 }
 .first{
    width: 50%;
    height: 40%;
-  /* background-color: yellow;*/
+  background-color: yellow;
    float: left;
    color: white;
    margin-left: 0px;
@@ -96,6 +96,6 @@ button{
    margin-top: 0px; 
    margin-right: 0px;
    color: white;
-   /*background-color: red;*/
+   background-color: red;
    float: right;
-}
+} */

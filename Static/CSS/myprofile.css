@@ -1,0 +1,24 @@
+body { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: sans-serif; 
+  background: #000; 
+  flex-direction: column; 
+  margin-top: 100px; 
+} 
+
+.profile { 
+  background:#FF4533;
+  color: white;
+  margin-top: 100px; 
+  border-radius: 15px; 
+  padding: 10px 20px; 
+  transition: transform 0.2s; 
+  width: 500px;
+  text-align: center; 
+  text-decoration: ;
+} 
+table{
+  margin-top: 0px;
+  margin-bottom: 50px;

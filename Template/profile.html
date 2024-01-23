@@ -1,0 +1,229 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TechFest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+</head>
+
+<body>
+        <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="{% static 'index.html' %}">
+                                        <!-- <img src="img/logo.png" alt=""> -->
+                                        <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Welcome name...</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{% static 'index.html' %}">home</a></li>
+                                            <li><a href="{% static '#' %}">Programs <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <!-- <li><a href="about.html">about</a></li> -->
+                                                    <li><a href="{% static 'Program.html' %}">Details</a></li>
+                                                    <li><a href="{% static 'Venue.html' %}">terms&Conditions</a></li>
+                                                    <li><a href="{% static 'blog.html' %}">Time</a></li>
+                                                    <li><a href="{% static 'single-blog.html' %}">prize</a></li>
+                                                   <!--  <li><a href="elements.html">Prize</a></li> -->
+                                                </ul>
+                                            </li>
+                                            <!-- <li><a href="#">Venue <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Time</a></li>
+                                                    <li><a href="single-blog.html">prize</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="#">Profile <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'myprofile' %}" target="rightbar">My Profile</a></li>
+                                                    <li><a href="{% static 'single-blog.html' %}">Edit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% static 'contact.html' %}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="buy_tkt">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="{% static 'login.html' %}">Logout</a>
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- body-start -->
+    <div class="main">
+        <div class=leftbar>
+           <h2 style="color: white;padding-left: 80px;padding-top: 20px;">Exodus 2024</h2><br><br>
+           <h6 style="padding-left: 15px;color: white;">Here, you can apply for the programms.<h6>
+            <button class="box">
+                <a href="{% static '#popup-box' %}">
+                  Apply
+                </a>
+            </button>
+            <div id="popup-box" class="modal">
+           <div class="content">
+            <h1 style="padding-left:120px;">Program Registration </h1> 
+              <form action="" method="post"> 
+               <div class=registration>
+              <div class=first>
+                Fashion Show     <input type="checkbox" id="fashionshow"
+                    name="fashionshow"><br> 
+                Dance     <input type="checkbox" id="Dance"
+                    name="Dance"> <br>
+                Debugging     <input type="checkbox" id="Debugging"
+                    name="Debugging"> <br> 
+                Lan Gaming     <input type="checkbox" id="Lan"
+                    name="Lan"><br>
+              </div>
+              <div class=second>
+                    Mobile Gaming     <input type="checkbox" id="Mobile"
+                    name="Mobile"> <br>
+                Quiz     <input type="checkbox" id="Quiz"
+                    name="Quiz"> <br>
+                Treasure Hunt     <input type="checkbox" id="Hunt"
+                    name="Hunt"> <br>
+                Spot Choreography      <input type="checkbox" id="Spot"
+                    name="Spot"> <br>
+              </div>
+            </div>
+
+            <a href="{% static '#' %}" class="box-close">
+                ×
+            </a>
+            <button class="submit">
+                  Submit
+            </button>
+        </div>
+    </div>
+            
+        </div> 
+        <div class="rightbar">
+          <div class="profilecontent">
+            Extra-curricular activities play a very important role in our life. Involving ourselves in these activities will fresh our minds and reduces all our pressure.
+
+            These events and activities are most exciting part of campus life in the institutes like St.Thomas College where a student faces immense pressure. These larger than life Exodus event not only helps students unwind, but also gives them exposure to manage such events successfully.<br><br>
+
+            Here, you will get to know the list of all the  Exodus Events organized in College. These events include Cultural, Sports, Technical and some other events.
+
+            These events are for all those who have a student from St.Thomas college and also other colleges can participate and   showcase their skills.
+           </div>
+        </div>
+    </div>
+    <!-- body-end -->
+
+    
+
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="footer_widget">
+                            <div class="address_details text-center">
+                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">12,13 Jan 2024</h4>
+                                <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Palocaren Square,St.Thomas College </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="{% static 'https://colorlib.com' %}" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- JS here -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/tilt.jquery.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+
+
+
+    <!--contact js-->
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
