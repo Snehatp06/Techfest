@@ -102,43 +102,34 @@
            <h2 style="color: white;padding-left: 80px;padding-top: 20px;">Exodus 2024</h2><br><br>
            <h6 style="padding-left: 15px;color: white;">Here, you can apply for the programms.<h6>
             <button class="box">
-                <a href="{% static '#popup-box' %}">
+                <a href="#popup-box">
                   Apply
                 </a>
             </button>
             <div id="popup-box" class="modal">
            <div class="content">
-            <h1 style="padding-left:120px;">Program Registration </h1> 
+            <h1 style="padding-left:300px;padding-top: 20px;">Program Registration </h1> 
               <form action="" method="post"> 
-               <div class=registration>
-              <div class=first>
-                Fashion Show     <input type="checkbox" id="fashionshow"
-                    name="fashionshow"><br> 
-                Dance     <input type="checkbox" id="Dance"
-                    name="Dance"> <br>
-                Debugging     <input type="checkbox" id="Debugging"
-                    name="Debugging"> <br> 
-                Lan Gaming     <input type="checkbox" id="Lan"
-                    name="Lan"><br>
-              </div>
-              <div class=second>
-                    Mobile Gaming     <input type="checkbox" id="Mobile"
-                    name="Mobile"> <br>
-                Quiz     <input type="checkbox" id="Quiz"
-                    name="Quiz"> <br>
-                Treasure Hunt     <input type="checkbox" id="Hunt"
-                    name="Hunt"> <br>
-                Spot Choreography      <input type="checkbox" id="Spot"
-                    name="Spot"> <br>
-              </div>
-            </div>
+               <div class="container">
+                 <div class="row">
+                   <div class="col-md-3" style="margin-left:50px;">
+                      <div class="card" style="width: 18rem; height:400px; margin-top:50px; " >
+                       <img class="card-img-top" src="{% static 'D:\TechFest\Tech_Fest\Static\Images\performer\fashion.jpeg' %}" alt="Card image cap"  height="250">
+                        <div class="card-body">
+                           <h5 class="card-title">Fashion Show</h5>
+                              <a href="{% static '#' %}" class="btn btn-dark">More Details</a>
+                              <!-- <button class="submit">Apply</button> -->
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+               </div>
 
-            <a href="{% static '#' %}" class="box-close">
+
+            <a href="#" class="box-close">
                 ×
             </a>
-            <button class="submit">
-                  Submit
-            </button>
+            
         </div>
     </div>
             

@@ -45,7 +45,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
+                            <div class="col-xl-6 col-lg-6" >
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
@@ -66,7 +66,7 @@
                                                     <li><a href="{% static 'single-blog.html' %}">prize</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{% static 'contact.html' %}">Contact</a></li>
+                                            {% comment %} <li><a href="{% static 'contact.html' %}">Contact</a></li> {% endcomment %}
                                         </ul>
                                     </nav>
                                 </div>
@@ -95,20 +95,25 @@
     <div class="container">
       <div class="row"> 
         <div class="main">
-            <h4 style="padding-top:20px;color: white;">Add Programms</h4>
-                <a class="btn btn-warning" style="margin-left:100px;margin-top:10px" href="{% url 'administration:add' %}">Add</a>
+            
+            <h4 style="padding-top:100px;color: white;">Add Programms</h4>
+                <a class="btn btn-warning" style="margin-left:50px;margin-top:20px;margin-bottom:50px;" href="{% url 'administration:add' %}">Add</a>
+                
+                <div class="row">
+                {% for i in program_list %} 
 
-                {% for i in program_list %}
                    <div class="col-md-3" style="margin-left:50px;">
                      <div class="card" style="width: 18rem; height:400px; margin-top:50px; " >
                         <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap"  height="250">
                         <div class="card-body">
                           <h5 class="card-title">{{i.program_name}}</h5>
-                          <a href="{% url 'administration:details' %}" class="btn btn-primary">More Details</a>
+                          <a href="{% url 'administration:details' i.program_no %}" class="btn btn-primary">More Details</a>
                         </div><!--card-body-->
                       </div><!--card-->
                    </div><!--col-md-3-->
+               
                 {% endfor %}
+            </div>
        </div><!--main-->
       </div><!--row--> 
     </div><!--container-->

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>More Details</title>
+    <title>TechFest</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                                                     <li><a href="{% static 'single-blog.html' %}">prize</a></li>
                                                 </ul>
                                             </li>
-                                            {% comment %} <li><a href="{% static 'contact.html' %}">Contact</a></li> {% endcomment %}
+                                            <li><a href="{% static 'contact.html' %}">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -91,29 +91,24 @@
     </header>
     <!-- header-end -->
 
-    <body> 
+<body> 
     <div class="container">
       <div class="row"> 
-                        <div class="main"> 
-                            <div class="col-md-6" style=" margin-top:50px;">
-                             <img src="{{programs.img.url}}" width="300" height="300" >
-                            </div>
-                            <div class="row">
-                            <div class="col-md-6" style=" margin-top:50px;">
-                              <h2 style="color:white;">{{programs.program_name}}</h2>
-                              <h5 style="color:white;">{{programs.discription}}<br></h5>
-                              <h6 style="color:white;">Terms & Conditions : {{programs.terms_condition}}<br></h6>
-                              <h6 style="color:white;">Date : {{programs.date}}<br></h6>
-                              <h6 style="color:white;">Venue : {{programs.venue}}<br></h6>
-                              <a class="btn btn-warning" href="{% url 'administration:update' programs.program_no %}">Update</a>
-                              <a class="btn btn-danger" href="{% url 'administration:delete' programs.program_no %}">Delete</a>
-                            </div>
-                            </div>
-                        </div>
-    
-      </div><!-- row --> 
-    </div><!-- container -->
-    </body>
+        <div class="main">
+                           
+           <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+              {{form.as_p}}
+              <input type="submit">
+           </form>
+
+
+                         
+                   
+        </div>
+      </div> 
+    </div>
+</body>
 
     <!-- footer_start  -->
     <footer class="footer">
